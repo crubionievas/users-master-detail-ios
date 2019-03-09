@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07A46105223461120003517F /* Extensions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A46104223461120003517F /* Extensions+UIViewController.swift */; };
+		07A700A22233D805004F9461 /* UsersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A700A12233D805004F9461 /* UsersRepository.swift */; };
+		07A700A62233D9DF004F9461 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A700A52233D9DF004F9461 /* Error.swift */; };
+		07A700A82233DA09004F9461 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A700A72233DA09004F9461 /* User.swift */; };
+		07A700AA2233DEEB004F9461 /* HttpClientBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A700A92233DEEB004F9461 /* HttpClientBuilder.swift */; };
+		07A700AC2233DF89004F9461 /* RandomUserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A700AB2233DF89004F9461 /* RandomUserAPI.swift */; };
 		07EEE8752231B58A00E485B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EEE8742231B58A00E485B4 /* AppDelegate.swift */; };
 		07EEE8772231B58A00E485B4 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EEE8762231B58A00E485B4 /* MasterViewController.swift */; };
 		07EEE8792231B58A00E485B4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EEE8782231B58A00E485B4 /* DetailViewController.swift */; };
@@ -38,6 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07A46104223461120003517F /* Extensions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIViewController.swift"; sourceTree = "<group>"; };
+		07A700A12233D805004F9461 /* UsersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRepository.swift; sourceTree = "<group>"; };
+		07A700A52233D9DF004F9461 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		07A700A72233DA09004F9461 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		07A700A92233DEEB004F9461 /* HttpClientBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientBuilder.swift; sourceTree = "<group>"; };
+		07A700AB2233DF89004F9461 /* RandomUserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserAPI.swift; sourceTree = "<group>"; };
 		07EEE8712231B58A00E485B4 /* UsersMasterDetail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UsersMasterDetail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07EEE8742231B58A00E485B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07EEE8762231B58A00E485B4 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -104,10 +116,47 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		07A46103223460F20003517F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				07A46104223461120003517F /* Extensions+UIViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		07A700A02233D7BD004F9461 /* Master */ = {
+			isa = PBXGroup;
+			children = (
+				07EEE8762231B58A00E485B4 /* MasterViewController.swift */,
+				07A700A12233D805004F9461 /* UsersRepository.swift */,
+			);
+			path = Master;
+			sourceTree = "<group>";
+		};
+		07A700A32233D9AD004F9461 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				07A700A92233DEEB004F9461 /* HttpClientBuilder.swift */,
+				07A700AB2233DF89004F9461 /* RandomUserAPI.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		07A700A42233D9C3004F9461 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				07A700A52233D9DF004F9461 /* Error.swift */,
+				07A700A72233DA09004F9461 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		07EEE8682231B58A00E485B4 = {
 			isa = PBXGroup;
 			children = (
 				07EEE8732231B58A00E485B4 /* UsersMasterDetail */,
+				07A700A42233D9C3004F9461 /* Model */,
+				07A700A32233D9AD004F9461 /* Networking */,
 				07EEE88A2231B58D00E485B4 /* UsersMasterDetailTests */,
 				07EEE8952231B58D00E485B4 /* UsersMasterDetailUITests */,
 				07EEE8722231B58A00E485B4 /* Products */,
@@ -129,8 +178,9 @@
 		07EEE8732231B58A00E485B4 /* UsersMasterDetail */ = {
 			isa = PBXGroup;
 			children = (
+				07A700A02233D7BD004F9461 /* Master */,
+				07A46103223460F20003517F /* Extensions */,
 				07EEE8742231B58A00E485B4 /* AppDelegate.swift */,
-				07EEE8762231B58A00E485B4 /* MasterViewController.swift */,
 				07EEE8782231B58A00E485B4 /* DetailViewController.swift */,
 				07EEE87A2231B58A00E485B4 /* Main.storyboard */,
 				07EEE87D2231B58D00E485B4 /* Assets.xcassets */,
@@ -237,7 +287,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = "Ocado Technology";
+				ORGANIZATIONNAME = "Carlos Rubio";
 				TargetAttributes = {
 					07EEE8702231B58A00E485B4 = {
 						CreatedOnToolsVersion = 10.1;
@@ -405,8 +455,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07A46105223461120003517F /* Extensions+UIViewController.swift in Sources */,
+				07A700AC2233DF89004F9461 /* RandomUserAPI.swift in Sources */,
+				07A700AA2233DEEB004F9461 /* HttpClientBuilder.swift in Sources */,
 				07EEE8792231B58A00E485B4 /* DetailViewController.swift in Sources */,
 				07EEE8772231B58A00E485B4 /* MasterViewController.swift in Sources */,
+				07A700A82233DA09004F9461 /* User.swift in Sources */,
+				07A700A22233D805004F9461 /* UsersRepository.swift in Sources */,
+				07A700A62233D9DF004F9461 /* Error.swift in Sources */,
 				07EEE8752231B58A00E485B4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

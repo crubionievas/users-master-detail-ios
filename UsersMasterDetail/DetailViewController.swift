@@ -3,7 +3,7 @@
 //  UsersMasterDetail
 //
 //  Created by Carlos Rubio on 07/03/2019.
-//  Copyright © 2019 Ocado Technology. All rights reserved.
+//  Copyright © 2019 Carlos Rubio. All rights reserved.
 //
 
 import UIKit

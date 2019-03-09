@@ -3,7 +3,7 @@
 //  UsersMasterDetail
 //
 //  Created by Carlos Rubio on 07/03/2019.
-//  Copyright © 2019 Ocado Technology. All rights reserved.
+//  Copyright © 2019 Carlos Rubio. All rights reserved.
 //
 
 import UIKit
@@ -12,6 +12,8 @@ class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
     var objects = [Any]()
+    fileprivate lazy var repository = UsersRepository(delegate: self)
+    private var users = [User]()
 
 
     override func viewDidLoad() {
@@ -25,6 +27,9 @@ class MasterViewController: UITableViewController {
             let controllers = split.viewControllers
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
+        
+        showProgress(true)
+        repository.getUsers(forResults: 100)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -84,7 +89,20 @@ class MasterViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }
-
-
 }
+
+extension MasterViewController: UsersRepositoryDelegate {
+    func usersFailed(error: APIError?, forRequestedNumber: Int) {
+        showProgress(false)
+    }
+    
+    func usersReceived() {
+        showProgress(false)
+        
+        users = repository.users
+        
+        self.tableView?.reloadData()
+    }
+}
+
 
