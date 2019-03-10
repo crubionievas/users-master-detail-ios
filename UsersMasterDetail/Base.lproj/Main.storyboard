@@ -34,9 +34,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="0XM-y9-sOw">
-                                <rect key="frame" x="20" y="323.5" width="335" height="20.5"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ogS-wN-fNe">
+                                <rect key="frame" x="123.5" y="115" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="bYY-Ol-1QK"/>
+                                    <constraint firstAttribute="height" constant="128" id="xNB-WP-b0R"/>
+                                </constraints>
+                            </imageView>
+                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="0XM-y9-sOw" userLabel="User Name">
+                                <rect key="frame" x="187.5" y="263" width="0.0" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fft-Ki-76H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="WSp-xL-bX7" userLabel="Email">
+                                <rect key="frame" x="187.5" y="323" width="0.0" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="EN0-or-iET"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="fxd-ou-l3d" userLabel="Phone">
+                                <rect key="frame" x="187.5" y="373" width="0.0" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dpp-lS-fK6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="HIw-Wl-89Y" userLabel="Cell">
+                                <rect key="frame" x="187.5" y="423" width="0.0" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="b2R-GO-uW0"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -44,16 +84,27 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="0XM-y9-sOw" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" constant="20" symbolic="YES" id="Tsc-yG-G1q"/>
-                            <constraint firstItem="0XM-y9-sOw" firstAttribute="centerY" secondItem="svH-Pt-448" secondAttribute="centerY" id="jWN-iV-94e"/>
-                            <constraint firstAttribute="trailing" secondItem="0XM-y9-sOw" secondAttribute="trailing" constant="20" symbolic="YES" id="tHV-ZD-HQj"/>
+                            <constraint firstItem="0XM-y9-sOw" firstAttribute="centerX" secondItem="VUw-jc-0yf" secondAttribute="centerX" id="1pV-CJ-juj"/>
+                            <constraint firstItem="HIw-Wl-89Y" firstAttribute="top" secondItem="fxd-ou-l3d" secondAttribute="bottom" constant="20" id="5P7-Vu-QzG"/>
+                            <constraint firstItem="VUw-jc-0yf" firstAttribute="top" secondItem="ogS-wN-fNe" secondAttribute="bottom" constant="-179" id="AVE-54-sgY"/>
+                            <constraint firstItem="fxd-ou-l3d" firstAttribute="top" secondItem="WSp-xL-bX7" secondAttribute="bottom" constant="20" id="HM9-nR-lBt"/>
+                            <constraint firstItem="fxd-ou-l3d" firstAttribute="centerX" secondItem="VUw-jc-0yf" secondAttribute="centerX" id="VIU-fR-un2"/>
+                            <constraint firstItem="ogS-wN-fNe" firstAttribute="centerX" secondItem="VUw-jc-0yf" secondAttribute="centerX" id="ZB1-dx-BiY"/>
+                            <constraint firstItem="WSp-xL-bX7" firstAttribute="centerX" secondItem="VUw-jc-0yf" secondAttribute="centerX" id="bcT-1E-Plb"/>
+                            <constraint firstItem="HIw-Wl-89Y" firstAttribute="centerX" secondItem="VUw-jc-0yf" secondAttribute="centerX" id="d8R-iS-PZI"/>
+                            <constraint firstItem="WSp-xL-bX7" firstAttribute="top" secondItem="0XM-y9-sOw" secondAttribute="bottom" constant="30" id="eqz-gi-Rnr"/>
+                            <constraint firstItem="0XM-y9-sOw" firstAttribute="top" secondItem="ogS-wN-fNe" secondAttribute="bottom" constant="20" id="j3o-Bj-o1I"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VUw-jc-0yf"/>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
                     <connections>
-                        <outlet property="detailDescriptionLabel" destination="0XM-y9-sOw" id="deQ-Na-JPF"/>
+                        <outlet property="userCell" destination="HIw-Wl-89Y" id="ejD-mC-ECC"/>
+                        <outlet property="userEmail" destination="WSp-xL-bX7" id="mhe-RW-Dsd"/>
+                        <outlet property="userImage" destination="ogS-wN-fNe" id="546-Yi-vv8"/>
+                        <outlet property="userName" destination="0XM-y9-sOw" id="urK-mB-qf2"/>
+                        <outlet property="userPhone" destination="fxd-ou-l3d" id="ohS-cZ-3tI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>

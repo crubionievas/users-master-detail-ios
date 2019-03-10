@@ -68,7 +68,7 @@ class MasterViewController: UITableViewController {
 
         let user = users[indexPath.row]
         
-        cell.userName.text = user.name?.first
+        cell.userName.text = user.name?.getFullName()
         
         // Download thumbnail
         if let imageUrl = user.picture?.thumbnail {

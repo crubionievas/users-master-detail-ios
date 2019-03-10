@@ -19,6 +19,14 @@ open class UserName {
         last = userName?["last"].string
         title = userName?["title"].string
     }
+    
+    func getFullName() -> String {
+        if let title = title, let first = first, let last = last {
+            return "\(title.capitalized) \(first.capitalized) \(last.capitalized)"
+        }
+        
+        return ""
+    }
 }
 
 open class UserPicture {

@@ -7,17 +7,42 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
-
+    @IBOutlet var userImage: UIImageView!
+    @IBOutlet var userName: UILabel!
+    @IBOutlet var userEmail: UILabel!
+    @IBOutlet var userPhone: UILabel!
+    @IBOutlet var userCell: UILabel!
 
     func configureView() {
         // Update the user interface for the detail item.
         if let user = detailItem {
-            if let label = detailDescriptionLabel {
+            // Download image
+            if let imageUrl = user.picture?.large {
+                if let url = URL(string: imageUrl) {
+                    if let image = userImage {
+                        image.af_setImage(withURL: url)
+                    }
+                }
+            }
+            
+            if let label = userName {
+                label.text = user.name?.getFullName()
+            }
+            
+            if let label = userEmail {
                 label.text = user.email
+            }
+            
+            if let label = userPhone {
+                label.text = user.phone
+            }
+            
+            if let label = userCell {
+                label.text = user.cell
             }
         }
     }
