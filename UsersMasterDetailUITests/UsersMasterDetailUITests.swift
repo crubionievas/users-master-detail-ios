@@ -9,6 +9,9 @@
 import XCTest
 
 class UsersMasterDetailUITests: XCTestCase {
+    
+    var app: XCUIApplication!
+    let existancePredicate = NSPredicate(format: "exists == true")
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -17,7 +20,8 @@ class UsersMasterDetailUITests: XCTestCase {
         continueAfterFailure = false
 
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
+        app = XCUIApplication()
+        app.launch()
 
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
@@ -25,10 +29,23 @@ class UsersMasterDetailUITests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+    
+    // MARK: - Users Use Cases
 
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testAccessFirstUser() {
+        // Access the first user when users table is loaded
+        let usersTable = app.tables.element(boundBy: 1)
+        expectation(for: existancePredicate, evaluatedWith: usersTable, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
+        
+        // Tap the first user and go to its detail
+        let firstCell = usersTable.cells.element(boundBy: 0)
+        firstCell.tap()
+        
+        // Check that we are inside user detail
+        let userDetailLabel = app.staticTexts["Detail"]
+        expectation(for: existancePredicate, evaluatedWith: userDetailLabel, handler: nil)
+        waitForExpectations(timeout: 2, handler: nil)
     }
 
 }
