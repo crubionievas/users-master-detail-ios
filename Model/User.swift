@@ -20,6 +20,12 @@ open class UserName {
         title = userName?["title"].string
     }
     
+    func setFullName(title: String, first: String, last: String) {
+        self.title = title
+        self.first = first
+        self.last = last
+    }
+        
     func getFullName() -> String {
         if let title = title, let first = first, let last = last {
             return "\(title.capitalized) \(first.capitalized) \(last.capitalized)"
