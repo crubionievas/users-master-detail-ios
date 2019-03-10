@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07A46105223461120003517F /* Extensions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A46104223461120003517F /* Extensions+UIViewController.swift */; };
+		07A46109223529040003517F /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A46108223529040003517F /* UserCell.swift */; };
 		07A700A22233D805004F9461 /* UsersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A700A12233D805004F9461 /* UsersRepository.swift */; };
 		07A700A62233D9DF004F9461 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A700A52233D9DF004F9461 /* Error.swift */; };
 		07A700A82233DA09004F9461 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A700A72233DA09004F9461 /* User.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		07A46104223461120003517F /* Extensions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIViewController.swift"; sourceTree = "<group>"; };
+		07A46108223529040003517F /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		07A700A12233D805004F9461 /* UsersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRepository.swift; sourceTree = "<group>"; };
 		07A700A52233D9DF004F9461 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		07A700A72233DA09004F9461 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -124,6 +126,22 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		07A46106223528BD0003517F /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				07A46107223528CC0003517F /* TableView */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		07A46107223528CC0003517F /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				07A46108223529040003517F /* UserCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
 		07A700A02233D7BD004F9461 /* Master */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +196,7 @@
 		07EEE8732231B58A00E485B4 /* UsersMasterDetail */ = {
 			isa = PBXGroup;
 			children = (
+				07A46106223528BD0003517F /* Subviews */,
 				07A700A02233D7BD004F9461 /* Master */,
 				07A46103223460F20003517F /* Extensions */,
 				07EEE8742231B58A00E485B4 /* AppDelegate.swift */,
@@ -463,6 +482,7 @@
 				07A700A82233DA09004F9461 /* User.swift in Sources */,
 				07A700A22233D805004F9461 /* UsersRepository.swift in Sources */,
 				07A700A62233D9DF004F9461 /* Error.swift in Sources */,
+				07A46109223529040003517F /* UserCell.swift in Sources */,
 				07EEE8752231B58A00E485B4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

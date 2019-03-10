@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class MasterViewController: UITableViewController {
 
@@ -57,12 +58,25 @@ class MasterViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users.count
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 56
+    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as! UserCell
 
-        let object = users[indexPath.row]
-        cell.textLabel!.text = object.name?.first
+        let user = users[indexPath.row]
+        
+        cell.userName.text = user.name?.first
+        
+        // Download thumbnail
+        if let imageUrl = user.picture?.thumbnail {
+            if let url = URL(string: imageUrl) {
+                cell.userImage.af_setImage(withURL: url)
+            }
+        }
+        
         return cell
     }
 
